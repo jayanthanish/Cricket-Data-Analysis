@@ -1,6 +1,3 @@
-/* -------------- STAGE 1 ------------ */
-
-//------- 1.a Interaction Code ------ //
 
 navigate('https://stats.espncricinfo.com/ci/engine/records/team/match_results.html?id=14450;type=tournament');
 
@@ -9,8 +6,6 @@ for(let i of links) {
   next_stage({url: i}) 
 }
 
-
-//------- 1.b Parser Code ------------//
 let links = []
 const allRows = $('table.engineTable > tbody > tr.data1');
  allRows.each((index, element) => {
@@ -22,9 +17,6 @@ return {
   'matchSummaryLinks': links
 };
 
-/* ------------ STAGE 2 -------------- */
-
-//------- 2.a Interaction Code ------ //
 navigate(input.url);
 
 
@@ -36,8 +28,6 @@ for(let obj of playersData) {
   next_stage({name: name, team: team, url: url}) 
 }
 
-//---------- 2.b Parser Code ---------//
-//to store all the players in a list
 var playersLinks = []
 
 var match = $('div').filter(function(){
@@ -109,10 +99,6 @@ secondInningsRows.each((index, element) => {
   
 return {"playersData": playersLinks}
  
- 
-/* ------------- STAGE 3 ------------ */
-
-//------- 3.a Interaction Code ------ //
 
 navigate(input.url);
 final_data = parse()
@@ -126,7 +112,6 @@ collect(
   "description": final_data.content,
 });
  
-//---------- 3.b Parser Code ---------//
 const battingStyle = $('div.ds-grid > div').filter(function(index){
     return $(this).find('p').first().text() === String('Batting Style')
   })
