@@ -1,5 +1,10 @@
 # Cricket Data Analysis: T20 World Cup 2022 Best XI
 
+
+![Screenshot 2025-06-28 174141](https://github.com/user-attachments/assets/6d9e7d46-ccd1-4fd4-94e5-c084564d45c5)
+
+[**View Live Dashboard Here**](https://app.powerbi.com/view?r=eyJrIjoiMzBhYTcyMTUtM2FjMC00YjZmLThhNDktNmNlYjAyNjIzY2M2IiwidCI6IjllZjlmNDg5LWUwYTAtNGVlYi04N2NjLTNhNTI2MTEyZmQwZCIsImMiOjF9)
+
 ## Project Overview
 
 This end-to-end data analytics project focuses on analyzing player performance from the T20 World Cup 2022 to identify the "Best XI Team of the Tournament." By combining web scraping, Python for data manipulation, and Power BI for interactive visualization, this project provides impactful insights into player statistics and helps in selecting an optimal team based on various performance metrics.
